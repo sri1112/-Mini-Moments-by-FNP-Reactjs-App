@@ -14,10 +14,11 @@ const Navbar = () => {
         {/* Logo and Location */}
         <div className="flex items-center space-x-4">
           <img
-            src="/img/logo.png"
+            src="https://th.bing.com/th/id/OIP.-teuHVCfFGFWgOZa5RgteQHaE7?w=220&h=188&c=7&r=0&o=7&pid=1.7&rm=3"
             alt="mnmn Logo"
-            className="h-20 w-auto object-contain"
+            className="h-24 w-auto object-contain"
           />
+
           <div className="flex items-center text-gray-700">
             <MdLocationOn className="mr-1" />
             <span>Where to deliver?</span>

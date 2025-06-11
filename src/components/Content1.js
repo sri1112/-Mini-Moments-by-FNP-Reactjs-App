@@ -2,7 +2,7 @@ import React from "react";
 
 const Content1 = () => {
   const categories = [
-    { title: "Father's Day", img: "/img/f1.jpg" },
+    { title: "Father's Day", img: "https://www.fnp.com/assets/images/custom/new-home-2025/hero-banners/Fathers_Day_Desk-04-06-2025.jpg" },
     { title: "Birthday", img: "https://www.fnp.com/assets/images/custom/new-desk-home/hero-banners/Birthday_Desk-28-03.jpg" },
     { title: "Anniversary", img: "https://www.fnp.com/assets/images/custom/new-desk-home/hero-banners/Anniversary_desk_10-03-2025.jpg" },
     { title: "2-Hour Delivery", img: "https://www.fnp.com/assets/images/custom/new-desk-home/hero-banners/2hourdelivery_Squircle_41224.jpg" },
@@ -18,22 +18,22 @@ const Content1 = () => {
       {/* Top 3 Banner Section */}
       <div className="grid grid-cols-1 md:grid-cols-4 gap-5 mb-8    ">
         <img
-          src="/img/f2.jpg"
+          src="https://www.fnp.com/assets/images/custom/new-home-2025/hero-banners/Fathers_Day_Desk-04-06-2025.jpg"
           alt="Dad Banner"
           className="rounded-lg w-full"
         />
         <img
-          src="/img/pgifts.jpg"
+          src="https://www.fnp.com/assets/images/custom/new-home-2025/hero-banners/Personalised_Gifts_Desk-10-06-25.jpg"
           alt="Personalised Gifts"
           className="rounded-lg w-full"
         />
         <img
-          src="/img/ma.jpg"
+          src="https://www.fnp.com/assets/images/custom/new-home-2025/hero-banners/cakes-banner_desk-03-06-25.jpg"
           alt="Birthday Anniversary"
           className="rounded-lg w-full"
         />
         <img
-          src="/img/fb.jpg"
+          src="https://www.fnp.com/assets/images/custom/new-home-2025/hero-banners/Mens_Accessories_Desk-10-06-25.jpg"
           alt="follower"
           className="rounded-lg w-full"
         />
