@@ -31,16 +31,18 @@ const CakeCategories = () => {
         {cakes.map((cake, index) => (
           <div
             key={index}
-            className="group cursor-pointer text-center hover:shadow-lg rounded-lg transition duration-300"
+            className="group cursor-pointer text-center transform transition-transform duration-300 hover:scale-[1.02]"
           >
-            <div className="overflow-hidden rounded-lg">
+            <div className="overflow-hidden rounded-xl shadow-md group-hover:shadow-xl transition-shadow duration-300">
               <img
                 src={cake.image}
                 alt={cake.name}
-                className="w-full h-40 object-cover transform group-hover:scale-105 transition duration-300"
+                className="w-full h-40 object-cover transform group-hover:scale-110 transition-transform duration-300"
               />
             </div>
-            <p className="mt-2 text-sm font-medium">{cake.name}</p>
+            <p className="mt-2 text-sm font-semibold text-gray-700 group-hover:text-[#db2777] transition-colors duration-300">
+              {cake.name}
+            </p>
           </div>
         ))}
       </div>

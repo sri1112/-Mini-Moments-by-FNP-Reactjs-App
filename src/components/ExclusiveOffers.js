@@ -5,7 +5,9 @@ const ExclusiveOffers = () => {
     {
       brand: "Airtel Payments Bank",
       color: "bg-red-600",
-      image: "https://www.fnp.com/assets/images/custom/new-home-2025/offers/Airtel_Partner_Banners_New_UI-25-04-2025.jpg",
+      hover: "hover:bg-red-700 hover:scale-105",
+      image:
+        "https://www.fnp.com/assets/images/custom/new-home-2025/offers/Airtel_Partner_Banners_New_UI-25-04-2025.jpg",
       title: "Enjoy Flat 10% Off",
       subTitle: "UPTO ₹200",
       terms: "T&C Apply | On minimum transaction of ₹999",
@@ -13,7 +15,9 @@ const ExclusiveOffers = () => {
     {
       brand: "Paytm UPI",
       color: "bg-blue-900",
-      image: "https://www.fnp.com/assets/images/custom/new-home-2025/offers/Paytm_New_UI-28-04-2025.jpg",
+      hover: "hover:bg-blue-950 hover:rotate-1",
+      image:
+        "https://www.fnp.com/assets/images/custom/new-home-2025/offers/Paytm_New_UI-28-04-2025.jpg",
       title: "₹100 Cashback",
       subTitle: "UPTO",
       terms: "T&C Apply | on Payments using Paytm UPI",
@@ -21,7 +25,9 @@ const ExclusiveOffers = () => {
     {
       brand: "Mobikwik",
       color: "bg-blue-600",
-      image: "https://www.fnp.com/assets/images/custom/new-home-2025/offers/Mobikwik_170125.jpg",
+      hover: "hover:bg-blue-700 hover:translate-y-1",
+      image:
+        "https://www.fnp.com/assets/images/custom/new-home-2025/offers/Mobikwik_170125.jpg",
       title: "15% Cashback",
       subTitle: "GET UPTO",
       terms: "T&C Apply | On minimum transaction of ₹800",
@@ -30,12 +36,15 @@ const ExclusiveOffers = () => {
 
   return (
     <div className="px-6 py-10">
+      {/* Section Title */}
       <h2 className="text-xl font-semibold mb-6">Get Exclusive Offers from</h2>
+
+      {/* Offers Grid */}
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
         {offers.map((offer, index) => (
           <div
             key={index}
-            className={`${offer.color} text-white rounded-xl p-6 flex flex-col justify-center items-start min-h-[150px]`}
+            className={`${offer.color} ${offer.hover} text-white rounded-xl p-6 flex flex-col justify-center items-start min-h-[150px] transition duration-300 ease-in-out`}
           >
             <img
               src={offer.image}

@@ -10,19 +10,20 @@ import JoyfulStories from "./JoyfulStories";
 import FlowerSection from "./FlowerSection";
 import CakeCategories from "./CakeCategories";
 import FooterSection from "./FooterSection";
+// import LoginRegister from "../login&signin/LoginRegister";
 
 const Home = () => {
   return (
-    <div className="min-h-screen w-full">
-      {/* Sticky Navbar OUTSIDE the flex layout */}
+    <div className="min-h-screen w-full bg-gray-50">
+      {/* Sticky Navbar */}
       <Navbar />
 
-      <div className="flex flex-wrap gap-4 mt-4">
-        {/* Sidebar */}
-        <div className="w-full lg:w-1/4">Sidebar</div>
+      {/* Page Layout */}
+      <div className="flex flex-col lg:flex-row gap-4 px-4 py-6">
+        {/* Sidebar - Hidden on small screens */}
 
         {/* Main Content */}
-        <div className="w-full lg:flex-1">
+        <main className="w-full lg:w-3/">
           <Content1 />
           <OccasionSection />
           <GiftingSection />
@@ -32,13 +33,13 @@ const Home = () => {
           <JoyfulStories />
           <FlowerSection />
           <CakeCategories />
-        </div>
-
-        {/* Footer */}
-        <div className="w-full">
-          <FooterSection />
-        </div>
+        </main>
       </div>
+
+      {/* Footer */}
+      <footer className="w-full">
+        <FooterSection />
+      </footer>
     </div>
   );
 };

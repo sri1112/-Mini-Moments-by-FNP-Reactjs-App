@@ -2,17 +2,25 @@ import React from "react";
 
 const GiftFinder = () => {
   return (
+    // Outer container with responsive padding and layout
     <div className="bg-[#f5f7ef] rounded-3xl p-4 sm:p-5 flex flex-col lg:flex-row justify-between items-center mt-5">
-      {/* Left: Content */}
+      
+      {/* Left Section - Gift Finder Content */}
       <div className="flex-1">
+        
+        {/* Heading */}
         <h2 className="text-xl font-bold text-[#4c4f3e] flex items-center mb-3">
           <span className="text-2xl mr-2">🔍</span> Gift Finder
         </h2>
 
+        {/* Gift search box */}
         <div className="bg-white p-3 rounded-xl shadow-md w-full max-w-md">
           <p className="mb-3 font-medium text-gray-700">Search Gifts Quicker ⚡</p>
+
+          {/* Grid for search options: Occasion and Gift Type */}
           <div className="grid grid-cols-2 gap-4">
-            {/* Occasion */}
+            
+            {/* Occasion Option */}
             <div className="text-center">
               <img
                 src="https://www.fnp.com/assets/images/custom/new-app-23/8-gift_finder/New-App_Gift-Finder_Occasion.jpg"
@@ -21,7 +29,8 @@ const GiftFinder = () => {
               />
               <p className="mt-1 text-sm text-gray-700">Occasion</p>
             </div>
-            {/* Gift Type */}
+
+            {/* Gift Type Option */}
             <div className="text-center">
               <img
                 src="https://www.fnp.com/assets/images/custom/new-app-23/8-gift_finder/New-App_Gift-Finder_Gift-Type.jpg"
@@ -30,11 +39,12 @@ const GiftFinder = () => {
               />
               <p className="mt-1 text-sm text-gray-700">Gift Type</p>
             </div>
+
           </div>
         </div>
       </div>
 
-      {/* Right: Image in circle */}
+      {/* Right Section - Circular Image */}
       <div className="mt-6 lg:mt-0 lg:ml-6 relative flex-1 flex justify-center">
         <div className="w-44 h-44 bg-[#c9f0e5] rounded-full flex justify-center items-center overflow-hidden">
           <img
