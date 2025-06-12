@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/mini-moments-reactjs-app/static/css/main.5821ec2a.css",
-    "main.js": "/mini-moments-reactjs-app/static/js/main.89e5a742.js",
+    "main.css": "/mini-moments-reactjs-app/static/css/main.af9510be.css",
+    "main.js": "/mini-moments-reactjs-app/static/js/main.d64ab2f6.js",
     "static/js/453.ed3810f9.chunk.js": "/mini-moments-reactjs-app/static/js/453.ed3810f9.chunk.js",
     "index.html": "/mini-moments-reactjs-app/index.html",
-    "main.5821ec2a.css.map": "/mini-moments-reactjs-app/static/css/main.5821ec2a.css.map",
-    "main.89e5a742.js.map": "/mini-moments-reactjs-app/static/js/main.89e5a742.js.map",
+    "main.af9510be.css.map": "/mini-moments-reactjs-app/static/css/main.af9510be.css.map",
+    "main.d64ab2f6.js.map": "/mini-moments-reactjs-app/static/js/main.d64ab2f6.js.map",
     "453.ed3810f9.chunk.js.map": "/mini-moments-reactjs-app/static/js/453.ed3810f9.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.5821ec2a.css",
-    "static/js/main.89e5a742.js"
+    "static/css/main.af9510be.css",
+    "static/js/main.d64ab2f6.js"
   ]
 }
