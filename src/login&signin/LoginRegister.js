@@ -18,6 +18,18 @@ const LoginRegister = ({ isRegister: defaultMode }) => {
   };
 
   // ✅ Axios-based handleSubmit function
+  // const handleSubmit = async () => {
+  //   const url = isRegister
+  //     ? "http://localhost:5000/api/register"
+  //     : "http://localhost:5000/api/login";
+
+  //   try {
+  //     const response = await axios.post(url, formData);
+  //     alert(response.data.message);
+  //   } catch (err) {
+  //     alert(err.response?.data?.message || "Something went wrong");
+  //   }
+  // };
   const handleSubmit = async () => {
     const url = isRegister
       ? "http://localhost:5000/api/register"
@@ -26,6 +38,10 @@ const LoginRegister = ({ isRegister: defaultMode }) => {
     try {
       const response = await axios.post(url, formData);
       alert(response.data.message);
+
+      if (!isRegister) {
+        localStorage.setItem("token", response.data.token);
+      }
     } catch (err) {
       alert(err.response?.data?.message || "Something went wrong");
     }
@@ -73,9 +89,7 @@ const LoginRegister = ({ isRegister: defaultMode }) => {
           className="text-center text-sm text-blue-600 cursor-pointer"
           onClick={() => setIsRegister(!isRegister)}
         >
-          {isRegister
-            ? "Already have an account? Login"
-            : "New here? Register"}
+          {isRegister ? "Already have an account? Login" : "New here? Register"}
         </p>
       </div>
     </div>

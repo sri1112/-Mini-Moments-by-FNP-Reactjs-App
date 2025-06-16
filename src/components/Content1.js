@@ -1,46 +1,22 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
+import axios from "axios";
+import { useNavigate } from "react-router-dom";
 
 const Content1 = () => {
-  const categories = [
-    {
-      title: "Father's Day",
-      img: "https://www.fnp.com/assets/images/custom/new-home-2025/hero-banners/Fathers_Day_Desk-04-06-2025.jpg",
-    },
-    {
-      title: "Birthday",
-      img: "https://www.fnp.com/assets/images/custom/new-desk-home/hero-banners/Birthday_Desk-28-03.jpg",
-    },
-    {
-      title: "Anniversary",
-      img: "https://www.fnp.com/assets/images/custom/new-desk-home/hero-banners/Anniversary_desk_10-03-2025.jpg",
-    },
-    {
-      title: "2-Hour Delivery",
-      img: "https://www.fnp.com/assets/images/custom/new-desk-home/hero-banners/2hourdelivery_Squircle_41224.jpg",
-    },
-    {
-      title: "FNP Luxe",
-      img: "https://www.fnp.com/assets/images/custom/new-desk-home/hero-banners/LUXE_NEW_Desk-02-05-2025.jpg",
-    },
-    {
-      title: "Personalised",
-      img: "https://www.fnp.com/assets/images/custom/new-desk-home/hero-banners/Persoanlised_Squircle-10-06-2025.jpg",
-    },
-    {
-      title: "Cakes",
-      img: "https://www.fnp.com/assets/images/custom/new-desk-home/hero-banners/Cakes-desk_20.jpg",
-    },
-    {
-      title: "Plants",
-      img: "https://www.fnp.com/assets/images/custom/new-desk-home/hero-banners/Plants_Squircle-10-06-2025.jpg",
-    },
-    {
-      title: "Pride Month",
-      img: "https://www.fnp.com/assets/images/custom/new-desk-home/hero-banners/pride_month_Desk_icon-07-06-2025.jpg",
-    },
-  ];
+  const navigate = useNavigate();
+  const [categories, setCategories] = useState([]);
 
-  // Unique hover styles for images
+  // Fetch categories from backend when component mounts
+  useEffect(() => {
+    axios.get("http://localhost:5000/api/categories")
+      .then((response) => {
+        setCategories(response.data);
+      })
+      .catch((error) => {
+        console.error("Error fetching categories:", error);
+      });
+  }, []);
+
   const hoverImageStyles = [
     "hover:scale-110 hover:shadow-lg",
     "hover:rotate-3 hover:scale-105",
@@ -53,7 +29,6 @@ const Content1 = () => {
     "hover:ring-2 hover:ring-green-400",
   ];
 
-  // Unique text color hover styles
   const hoverTextColors = [
     "group-hover:text-pink-600",
     "group-hover:text-blue-600",
@@ -92,12 +67,13 @@ const Content1 = () => {
         />
       </div>
 
-      {/* 🔹 Scrollable Category Row with hover effects */}
+      {/* 🔹 Scrollable Category Row */}
       <div className="flex space-x-5 overflow-x-auto scrollbar-hide py-2 px-1">
         {categories.map((cat, index) => (
           <div
-            key={index}
+            key={cat.id}
             className="group flex flex-col items-center min-w-[100px] sm:min-w-[120px] transition-transform duration-300 ease-in-out"
+            onClick={() => navigate(`/product/${cat.id}`)}
           >
             <img
               src={cat.img}

@@ -10,6 +10,7 @@ import JoyfulStories from "./JoyfulStories";
 import FlowerSection from "./FlowerSection";
 import CakeCategories from "./CakeCategories";
 import FooterSection from "./FooterSection";
+
 // import LoginRegister from "../login&signin/LoginRegister";
 
 const Home = () => {
